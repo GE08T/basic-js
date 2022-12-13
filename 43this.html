@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kata Kuci This</title>
+</head>
+<body>
+<script>
+	/*
+		digunakan untuk mereferensi ke object milik siapa 
+
+		tiap lokasi kata kunci this, bisa berbeda - beda referensi pemiliknya
+
+		window adalah browser itu sendiri
+
+		dengan this dapat mengakses property lain didalam object itu sendiri
+	*/
+
+	console.info(this); //window
+
+	function sample() {
+		console.info(this);
+		
+		function inner() {
+			console.info(this);
+		}
+
+		inner();
+	}
+
+	sample();
+
+	const person = {
+		name: "Sayang",
+		sayHello: function (value){
+			console.info(`Hello ${value} My Name is ${this.name}`);
+		}
+	};
+
+	person.sayHello("Budi");
+
+</script>
+</body>
+</html>

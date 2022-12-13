@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>With Statement</title>
+</head>
+<body>
+<script>
+	/*
+		tidak direkomendasikan untuk digunakan, karena membuat sebuah kode menjadi ambigu 
+		
+		karena kita tidak akan tahu nama dari property nya
+
+		digunakan untuk mengakses value tanpa menulis nama 
+	*/
+
+	const person = {
+		firstName: "Galung",
+		middleName: "Erlyan",
+		lastName: "Tama"
+	}
+
+	console.info(person.firstName);
+	console.info(person.middleName);
+	console.info(person.lastName);
+
+	const firstName = "Kalo";
+	const lastName = "Nugraha";
+
+	with (person) {
+		console.info(firstName);
+		console.info(middleName);
+		console.info(lastName);
+	}
+
+</script>
+</body>
+</html>

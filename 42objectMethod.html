@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object Method</title>
+</head>
+<body>
+<script>
+	/*
+		object method adalah property yang memiliki value sebuah function
+	*/
+
+	function sayHello(name) {
+		alert(`Hello ${name}`);
+	}
+
+	// const person = {
+	// 	name: "Eko",
+	// 	sayHello: function (name) {
+	// 		alert(`Hello ${name}`);
+	// 	}, //sebagai function
+	// 	sayName: sayHello //sama seperti ini
+	// };
+
+	const person = {
+		name: "eko"
+	};
+
+	person.sayHello = function (name) {
+		alert(`Hello ${name}`);
+	}
+
+	person.sayHello('Jamal')
+</script>
+</body>
+</html>

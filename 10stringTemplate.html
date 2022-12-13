@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>String Template</title>
+</head>
+<body>
+<script>
+	/*
+		backtick = ``
+	*/
+
+	//example
+	const name = "Galung Erlyan Tama";
+	const template = `Name : ${name}`;
+
+	console.info(template);
+
+	//expression string 
+	const value = 60;
+	const all = `Name : ${name}, Lulus : ${value > 75}`;
+
+	console.info(all);
+
+	//multiline string
+	let multilineString = `
+	Halo ini adalah 
+	multiline string, 
+	jadi ini cuma contoh`;
+
+	document.writeln("<pre>");
+	document.writeln(multilineString);
+	document.writeln("<pre>");
+
+</script>
+</body>
+</html>

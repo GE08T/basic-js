@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Operator Matematika</title>
+</head>
+<body>
+<script>
+	/*	OPERATOR ARITMATIKA
+		+  pertambahan
+		-  pengurangan
+		*  perkalian
+		** perpangkatan
+		/  pembagian 
+		%  modulo hasil bagi
+	*/
+	document.writeln("OPERATOR ARITMATIKA");
+	document.writeln("<br>");
+
+	let result = 1 + 2; //3
+	document.writeln("<p>1 + 2 = " + result  + "</p>");
+	let originalResult = result; //3
+
+	result = result - 1; //2
+	document.writeln("<p>" + originalResult  + " - 1 = " + result + "</p>"); 
+	originalResult = result; //2
+
+	result = result * 2; //4
+	document.writeln("<p>" + originalResult  + " x 2 = " + result + "</p>"); //4
+	document.writeln("<br>");
+
+	/*	OPERATOR AUGMENTED ASSIGNMENT 
+		result += 1 = result = result + 1
+		result -= 1 = result = result - 1
+		result *= 1 = result = result * 1
+		result **= 1 = result = result ** 1
+		result /= 1 = result = result / 1
+		result %= 1 = result = result % 1
+	*/
+	document.writeln("OPERATOR AUGMENTED ASSIGNMENT");
+	document.writeln("<br>");
+
+	let hasil = 1 + 2; //3
+	document.writeln("<p>1 + 2 = " + hasil  + "</p>");
+	let originalHasil = hasil; //3
+
+	hasil -= 1; //2
+	document.writeln("<p>" + originalHasil  + " - 1 = " + hasil + "</p>");
+	document.writeln("<br>");
+
+	/*	OPERATOR UNARY
+		+ menandakan positif / default nya positif
+		- menandakan negatif
+		++ menaikan 1 angka
+		-- menurunkan 1 angka
+	*/
+	document.writeln("OPERATOR UNARY");
+	document.writeln("<br>");
+
+	let angka = 1;
+	document.writeln("<p>" + angka  + "</p>");
+
+	angka--; //angka -= 1 = angka = angka - 1
+	document.writeln("<p>" + angka  + "</p>");
+
+	angka++; //angka += 1 = angka = angka + 1
+	document.writeln("<p>" + angka  + "</p>");
+
+	angka = -1
+	document.writeln("<p>" + angka  + "</p>");
+
+	document.writeln("<br>");
+
+</script>
+</body>
+</html>

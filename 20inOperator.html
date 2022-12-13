@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Operator Typeof</title>
+</head>
+<body>
+<script>
+	/*
+		Operator in = mengecek apakah ada property atau tidak dalam object dan mengecek index dalam array
+
+		hasil operator = boolean
+
+		in property tidak mengecek value nya 
+	*/
+
+	const person = {
+		halo: "tolol"
+	};
+
+	if ("halo" in person) {
+		alert(`Hello ${person.halo}`);
+	} else {
+		alert("Hello")
+	}
+
+	const student = {
+		firstname: undefined,
+		fullname: "Kamu cantik"
+	}
+
+	if ("firstname" in student) {
+		alert(`Hello ${student.firstname}`);
+	} else {
+		alert("Hello student");
+	}
+
+	const names = [null, "Erlyan", null];
+
+	const result = 0 in names;
+	document.writeln(`<p>${result}</p>`)
+
+</script>
+</body>
+</html>

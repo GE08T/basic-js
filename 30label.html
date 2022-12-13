@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Label</title>
+</head>
+<body>
+<script>
+	/*
+		label penanda menggunakan kata kunci break continue
+
+		label: untuk memilih perulangan mana yang ingin di break atau di countinue
+	*/
+	
+	loopi:
+		for (let i = 0; i < 10; i++) {
+			loopj:
+			for(let j = 0; j < 100; j++) {
+				if (j > 10) {
+					continue loopi;
+				}
+				console.info(`${i} - ${j}`);
+			}
+		}
+
+</script>
+</body>
+</html>

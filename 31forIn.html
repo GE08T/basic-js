@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>For In</title>
+</head>
+<body>
+<script>
+	/*
+		For In : untuk mengiterasi seluruh data porperty object / index di array 
+
+		tidak di rekomendasikan untuk array dan jarang digunakan di array
+	*/
+	
+	//object
+	const person = {
+		firstName: "Galung",
+		middleName: "Erlyan",
+		lastName: "Tama"
+	}
+
+	for (const property in person){
+		document.writeln(`<p>${property} : ${person[property]}</p>`);
+	} //bukan value dari property
+
+	//array
+	const names = ["Eko", "Kurniawan", "Khannedy"];
+	for (const index in names) {
+		document.writeln(`<p>${index} : ${names[index]}</p>`);
+	}
+
+</script>
+</body>
+</html>

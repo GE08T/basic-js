@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Masalah Variable Var</title>
+</head>
+<body>
+<script>
+	
+	/*
+		tidak bisa mengikat scope local
+	*/
+
+	var i = 20;
+
+	for (var i = 0 ; i < 10; i++) {
+		console.info(`Local ${i}`);
+	} // mengubah variable global yang dideklarasikan 
+
+	console.info(`Global ${i}`);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Anonymous Function</title>
+</head>
+<body>
+<script>
+
+	const say = function(name){
+		document.writeln(`<p>Hello ${name}</p>`);
+	} //dimasukan ke variable
+
+	say("Galung");
+
+	function giveMeName(callback){
+		callback("Galung");
+	}
+
+	giveMeName(function(name){
+		document.writeln(`<p>Hi ${name}</p>`);
+	}); //dengan parameter
+
+</script>
+</body>
+</html>

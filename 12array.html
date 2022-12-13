@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tipe Data Array</title>
+</head>
+<body>
+<script>
+	/*
+		array di js dinamis seperti php
+
+		urutan array adalah index berbeda dari isi array
+
+		index dimulai dari 0
+
+		operai array
+			* array.push(value) = menambah data 
+			* array.length = panjang array
+			* array[index] = mendapatkan data dengan index
+			* array[index] = value mengubah data dengan index
+			* delete array[index] =  menghapus data di posisi index,
+			* perlu di ingat index tidak bergeser
+	*/
+
+	document.writeln("Array");
+	document.writeln("<br>");
+
+	let arrayKosong = [];
+	let arrayNama = ["Galung", "Erlyan", "Tama"];
+
+	//menambah Array
+	const names = [];
+	names.push("Eko");
+	names.push("Kurniawan", "Khannedy");
+	names.push("Halo", "Kamu")
+
+	console.table(names);
+	console.info(names[2]); //get array
+
+	//ubah array
+	names[0] = "Budi";
+
+	console.table(names);
+
+	//delete array
+	delete names[2];
+
+	console.table(names);
+
+	//edit deleted array
+	names[2] = "Khannedy";
+
+	console.table(names);
+
+	//array dalam array = multi dimensional array
+	names.push(["Galung", "Kurniawan", "Khannedy"]);
+
+	console.table(names);
+	
+
+	document.writeln("<br>");
+
+</script>
+</body>
+</html>

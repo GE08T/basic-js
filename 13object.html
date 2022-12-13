@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tipe Data Object</title>
+</head>
+<body>
+<script>
+	/*
+		associative array = index yang dapat diganti dengan string
+
+		tipe data object = associative array
+		index di object = attributes
+		value di object = property
+	*/
+
+	document.writeln("Object");
+	document.writeln("<br>");
+
+	const person = {}; //obj kosong
+
+	//menambah atau mengubah
+	person["nama"] = "Galung Erlyan Tama";
+	person["alamat"] = "Indonesia";
+	person["umur"] = 17;
+
+	console.table(person);
+
+	//menghapus
+	delete person["umur"];
+
+	console.table(person);
+
+	//membuat object dengan properties
+	const orang = {
+		"nama lengkap" : "Eko Kurniawan",
+		alamat: "Indonesia",
+		umur: 60
+	};
+
+	console.table(orang);
+
+	//mengakses property object
+	console.info(`Nama : ${orang["nama lengkap"]}`);
+	console.info(`alamat : ${orang.alamat}`);
+	console.info(`Nama : ${orang.umur}`);
+
+
+	document.writeln("<br>");
+</script>
+</body>
+</html>

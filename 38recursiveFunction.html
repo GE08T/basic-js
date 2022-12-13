@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Recursive Factorial</title>
+</head>
+<body>
+<script>
+	
+	/*
+		function yang dapat memanggil dirinya sendiri
+	*/
+
+	function factorial(value){
+		let result = 1;
+		for (let i = 1; i <= value; i++){
+			result *= i;
+		}
+		return result;
+	}
+
+	console.info(factorial(5));
+
+	function factorialRecursive(value) {
+		if (value === 1){
+			return 1;
+		} else {
+			return value * factorialRecursive(value - 1);
+		}
+	}
+
+	console.info(factorialRecursive(5));
+
+</script>
+</body>
+</html>

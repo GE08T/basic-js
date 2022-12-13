@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Switch Expression</title>
+</head>
+<body>
+<script>
+	/*
+		switch = hanya sebuah perbandingan sederhana
+
+		kondisi nya hanya untuk == (sama dengan case tersebut)
+	*/
+
+	let nilai = "B";
+
+	switch (nilai) {
+		case "A":
+			document.writeln("<p>Wow Anda Lulus Dengan Baik");
+			break;
+		case "B":
+		case "C":
+			document.writeln("<p>Anda Lulus");
+			break;
+		case "D":
+			document.writeln("<p>Anda Tidak Lulus");
+			break;
+		default:
+			document.writeln("<p>Mungkin Anda Salah Jurusan");
+	}
+	
+
+</script>
+</body>
+</html>

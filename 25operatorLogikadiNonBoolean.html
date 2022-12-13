@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Operator Logika di Non Boolean </title>
+</head>
+<body>
+<script>
+	/*
+		operator or mengambil nilai pertama yang truthy
+		tidak ada thruty ambil paling kanan
+
+		operator and mengambil nilai pertama yang falsy 
+		tidak ada falsy ambil paling kanan
+	*/
+
+	console.info("Hello" || ''); 
+	console.info("" || []); 
+	console.info("0" || "NOL"); 
+	console.info(0 || "NOL"); 
+	console.info(null || "NULL"); 
+	console.info(undefined || "UNDEFINED"); 
+	console.info(0 || false); 
+
+	const person = {
+		firstName: "Galung",
+		lastName: "Erlyan"
+	}
+
+	const name = person.firstName || person.lastName;
+	console.info(name);
+
+	console.info("Hello" && ''); 
+	console.info("" && []); 
+	console.info("0" && "NOL"); 
+	console.info(0 && "NOL"); 
+	console.info(null && "NULL"); 
+	console.info(undefined && "UNDEFINED"); 
+	console.info("undefined" && "null");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ternary Operator</title>
+</head>
+<body>
+<script>
+	/*
+		operator ini bentuk sederhana dari if else
+	*/
+
+	// if biasa
+	const nilai = 60;
+	let ucapan;
+
+	if (nilai >= 75) {
+		ucapan = "Selamat Anda Lulus";
+	}else {
+		ucapan = "Silahkan Coba Lagi";
+	}
+
+	document.writeln(`<p>${ucapan}</p>`);
+
+	// ternary if
+	ucapan = nilai >= 75 ? "Selamat Anda Lulus" : "Silahkan Coba Lagi";
+
+	document.writeln(`<p>${ucapan}</p>`);
+
+
+</script>
+</body>
+</html>

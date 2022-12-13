@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>String Template</title>
+</head>
+<body>
+<script>
+	/*
+		function :
+			* parseInt(string) = mengkonversi string ke number (bilangan bulat)
+			* parseFloat(string) = mengkonversi string ke number (bilangan pecahan)
+			* Number(string) = mengkonversi string ke number (bilangan bulat atau pecahan)
+			* number.toString() mengkonversi number ke string
+		
+		jika string yang dikonversikan menjadi number tidak valid hasilnya akan menjadi NaN
+
+		NaN (Not a Number) = number spesial yang menyebutkan bahwa ini bukanlah number
+
+		jikaa NaN di operasi dengan number hasilnya akan NaN
+
+		isNaN() mengecek apakah number tsb adalah NaN atau bukan
+	*/
+
+	//string + number, numbernya menjadi string
+	document.writeln("Konversi string to number");
+	document.writeln("<br>");
+
+	const value1 = parseInt("1");
+	const value2 = 1;
+	const sum = value1 + value2;  //string + number
+
+	document.writeln(`<p>${sum}</p>`);
+
+	document.writeln(`<p>${parseInt("1.1")}</p>`); // pecahan dihiraukan 
+	document.writeln(`<p>${parseFloat("1.1")}</p>`);
+	document.writeln(`<p>${Number("11")}</p>`);
+	document.writeln("<br>");
+	
+	document.writeln("Konversi number to string");
+	document.writeln("<br>");
+
+	const a = 2;
+	const b = 2;
+	const total = a.toString() + b.toString();
+
+	document.writeln(`<p>${total}</p>`);
+	document.writeln("<br>");
+
+	document.writeln("Not a Number");
+	document.writeln("<br>");
+
+	document.writeln(`<p>${parseInt("salah")}</p>`); 
+	document.writeln(`<p>${parseInt("1.1hai")}</p>`); //jika ada angka didepan ditolerir
+
+	document.writeln(`<p>${Number("salah")}</p>`); 
+	document.writeln(`<p>${Number("1.1hai")}</p>`); //jika salah tetap NaN
+
+	const first = Number("salah"); //NaN
+	const totalNumber = first + 200;
+
+	document.writeln(`<p>${totalNumber}</p>`); //selalu menjadi NaN
+	document.writeln(`<p>${isNaN(first)}</p>`);
+
+</script>
+</body>
+</html>

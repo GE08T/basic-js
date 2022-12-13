@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Strict Mode</title>
+</head>
+<body>
+<script>
+	/*
+		saat default kode program JS berjalan maka ia masih menggunakan sloppy mode
+
+		strict mode di gunakan untuk mengubah beberapa cara kerja di JS seperti :
+
+		merubah beberapa JS error dari yang tadinya silent error, menjadi throw error (terlihat)
+
+		memperbaiki beberapa kesalahan engine JS untuk optimasi
+
+		menolak beberapa kode perintah kedepannya akan digunakan di ES
+
+		perintah dapat di search dalam JS transitioning into strict mode
+	*/
+	function useStrictMode() {
+		'use strict'
+		const person = {
+			firstName: "Eko"
+		};
+
+		// error
+		// with (person) {
+		// 	console.info(firstName);
+		// }
+	};
+
+	useStrictMode();
+
+
+
+
+</script>
+</body>
+</html>

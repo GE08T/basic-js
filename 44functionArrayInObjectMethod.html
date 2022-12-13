@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object Method Arrow Function</title>
+</head>
+<body>
+<script>
+	/*
+		jika menggunakan kata this maka mengacu nya pada window bukan property nya
+	*/
+
+	const person = {
+		name: "Galung",
+		sayHello: (name) => {
+			console.info(this);
+			console.info(`Hello ${name}`);
+		}
+	};
+
+	person.sayHello("Budi");
+	
+
+
+</script>
+</body>
+</html>

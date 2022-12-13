@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arrow Function</title>
+</head>
+<body>
+<script>
+	/*
+		Arrow Function menggunakan browser dengan ES6
+		
+		Ada limitasi ketika menggunakan Arrow Function 
+
+		tidak memilik fitur arguments object
+		tidak bisa menggunakan function generator 
+		tidak bisa mengakses this {function object}
+		tidak bisa mengakses super {JS OOP}
+
+		disebut arrow karena menggunakan tanda =>
+
+		arrow function bisa tanpa block hanya berisi satu baris
+
+		parameter 1 bisa tanpa () tapi jika kosong harus memakai ()
+	*/
+	const sayHello = (name) => {
+		const say = `Hello ${name}`;
+		console.info(say);
+	}
+
+	// function tanpa block
+	// const halo = (name) => console.info(`Hello ${name}`);
+
+	const halo = name => console.info(`Hello ${name}`); //tanpa () hanya 1 parameter
+
+	// function return value
+	// const sum = (first, second) => {
+	// 	return first + second;
+	// }
+
+	// function return value 1 block
+	const sum = (first, second) => first + second;
+
+	//arrow sebagai parameter
+	function giveMeName(callback) {
+		callback("Eko");
+	}
+
+	// annonymous function 
+	// giveMeName (function (name)) {
+	// 	console.info(`Hello ${name}`);
+	// }
+
+	// arrow function
+	giveMeName (name => console.info(`Hello ${name}`));
+
+	halo("Sayang");
+	sayHello("Galung");
+	console.info(sum(100,100));
+
+</script>
+</body>
+</html>

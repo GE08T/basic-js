@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Function</title>
+</head>
+<body>
+<script>
+	/*
+		function : block kode yang berjalan jika dipanggil
+
+		contoh adalah writeln() 
+
+		memanggil function dengan nama function di ikuti (), dikenal juga sebagai method
+
+		function optional parameter by default undefined
+
+		default parameter : bisa di beri default value, jika parameter nya tidak ada by default value akan di set
+
+		rest parameter : mengkonversi data secara otomatis menjadi array hanya dalam 1 parameter
+
+		syarat menggunakan rest parameter : hanya boleh 1, posisinya paling akhir 
+
+		atau bisa dibilang variable argument
+
+		spread syntax di gunakan untuk merubah data array menjadi rest parameter
+
+		sebelum adanya rest parameter menggunakan argument tapi tidak di anjurkan karena kita tidak dapat menentukan parameter nya
+
+		function bisa dimasukan kedalam variable
+	*/
+
+	function sayHelloWorld(){
+		document.writeln(`<p>Hello World</p>`);
+	}
+
+	sayHelloWorld();
+
+	function sayHello(firstName, lastName){
+		document.writeln(`<p>Hello ${firstName} ${lastName}</p>`);
+	} //function with parameter
+
+	sayHello("Kamu", "Cantik"); //isi parameter
+	sayHello("gero"); //parameter tidak wajib di isi
+	sayHello("Kamu", "Cantik", "gero"); //parameter kebanyakan tidak error
+
+	function sapa(firstName, lastName){
+		const say = `<p>Hello ${firstName} ${lastName}</p>`;
+		return say; //mengembalikan value
+	} //function return value
+
+	const result = sapa("Galung", "Erlyan"); //menampung value dalam variable
+	document.writeln(`<p>${result}</p>`); //menampilkan value
+
+	function getFinalScore(value) {
+		if (value > 90){
+			return "A"; //hanya sekali
+		} else if (value > 80){
+			return "B"; 
+		} else if (value > 70){
+			return "C";
+		} else if (value > 60){
+			return "D";
+		} else {
+			return "E";
+		}
+	}
+	const finalValue = getFinalScore(95);
+	document.writeln(`<p>${finalValue}</p>`);
+
+	function isContains(array, searchValue){
+		for (const element of array){
+			console.info(`iterasi element ${element}`)
+			if(element === searchValue){
+				return true; //menghentikan eksekusi dengan return
+			}
+		}
+
+		return false; //jika element tak sama searchValue
+	}
+
+	const array = [1324,131,43,13,23,23,23,1,31,312];
+	const search = 23;
+	const found = isContains(array, search);
+	document.writeln(`<p>${found}</p>`);
+
+	function register(name, gender = "UNKNOWN"){ //deklarasi default value
+		console.log(name);
+		console.log(gender);
+	}
+
+	register("EKO", "Male");
+	register("Xontol");
+	register();
+
+	function sum(name, ...data){ //deklarasi rest parameter
+		let total = 0;
+		for (const item of data){
+			total += item;
+		}
+
+		document.writeln(`<p>Total ${name} is ${total}</p>`)
+	}
+
+	sum("Orance", ...[12, 14, 53, 56, 95]);//deklarasi spread syntax
+	sum("Apple", 12, 14, 59, 56, 95);
+	sum("Banana", 12, 14, 55, 56, 95); // deklarasi menjadi array
+
+	function sayHallo (name){
+		document.writeln(`<p>Hello ${name}</p>`);
+	} //function sebagai value
+
+	let say = sayHallo; //function di dalam variable
+
+	sayHallo("Galung");
+	say("Budi"); //memanggil dengan varible
+
+	let sayang = sayHallo;
+
+	function giveMeName(callback){
+		callback("Eko"); //menjadi parameter name
+	} //masuk sebagai parameter name di sayHallo
+
+	giveMeName(sayHallo); //memanggil say hallo
+	giveMeName(say); //giveMeName(sayHello)
+
+</script>
+</body>
+</html>
