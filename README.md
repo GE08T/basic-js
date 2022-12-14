@@ -4,7 +4,11 @@ This is a Basic Functionality JavaScript Programming Language.
 ## Learning Resource
 I Learn this from Youtube Video 
 </br>Link Youtube : https://www.youtube.com/watch?v=SDROba_M42g
-	
+
+## Tools
+- IDE
+- Browser
+
 ## Download
 Install this using GIT :
 
