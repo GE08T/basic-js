@@ -1,5 +1,5 @@
 ## General info
-This is a Basic Functionality JavaScript Programming Language.
+This is a Basic Functionality of JavaScript Programming Language.
 	
 ## Learning Resource
 I Learn this from Youtube Video 
